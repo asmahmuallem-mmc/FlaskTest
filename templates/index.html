@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Distribution</title>
+</head>
+<body>
+    <h1>State Distribution</h1>
+    <form method="post">
+        <label for="state">Enter State Name:</label>
+        <input type="text" id="state" name="state">
+        <button type="submit">Generate Plot</button>
+    </form>
+    {% if image_url %}
+        <h2>Plot for {{ state }}</h2>
+        <iframe src="{{ image_url }}" width="100%" height="500px"></iframe>
+    {% endif %}
+    {% if table_url %}
+        <h2>Top 10 Rows of Dataset</h2>
+        <iframe src="{{ table_url }}" width="100%" height="500px"></iframe>
+    {% endif %}
+</body>
+</html>
