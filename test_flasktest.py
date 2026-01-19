@@ -6,6 +6,7 @@ from plot_utils import generate_plot, generate_table
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
         # Set up the test client
+        #adding new comment
         self.app = app.test_client()
         self.app.testing = True
 
